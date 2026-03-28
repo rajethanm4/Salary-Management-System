@@ -55,4 +55,6 @@ group :development, :test do
   gem "faker"
 
   gem "kaminari"
+
+  gem "byebug"
 end

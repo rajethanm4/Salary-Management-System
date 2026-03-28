@@ -12,7 +12,7 @@ class SalaryCalculator
   end
 
   def call
-    gross_salary = employee.salary.to_d
+    gross_salary = employee.salary.to_f
     rule = deduction_rule
 
     return no_deduction_response(gross_salary) unless rule

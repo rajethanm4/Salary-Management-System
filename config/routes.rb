@@ -16,10 +16,8 @@ Rails.application.routes.draw do
       end
 
       namespace :metrics do
-        namespace :salary do
-          get "country/:country", to: "salary#by_country"
-          get "job_title/:job_title", to: "salary#by_job_title"
-        end
+        get "salary/country/:country", to: "salary#by_country"
+        get "salary/job_title/:job_title", to: "salary#by_job_title"
       end
     end
   end
