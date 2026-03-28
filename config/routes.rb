@@ -7,4 +7,20 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  namespace :api do
+    namespace :v1 do
+      resources :employees do
+        member do
+          get :salary
+        end
+      end
+
+      namespace :metrics do
+        namespace :salary do
+          get "country/:country", to: "salary#by_country"
+          get "job_title/:job_title", to: "salary#by_job_title"
+        end
+      end
+    end
+  end
 end
