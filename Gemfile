@@ -57,4 +57,6 @@ group :development, :test do
   gem "kaminari"
 
   gem "byebug"
+
+  gem "rack-cors"
 end
